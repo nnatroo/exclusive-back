@@ -3,6 +3,7 @@ const express = require('express');
 const emojis = require('./emojis');
 const products = require('./products');
 const menus = require('./menus');
+const bestSellingProducts = require('./bestSellingProducts');
 
 const router = express.Router();
 
@@ -11,6 +12,8 @@ router.get('/', (req, res) => {
     message: 'API/V1',
   });
 });
+
+router.use('/bestSellingProducts', bestSellingProducts);
 
 router.use('/emojis', emojis);
 
