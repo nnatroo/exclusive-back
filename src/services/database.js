@@ -9,7 +9,7 @@ async function connectToDatabase() {
   try {
     await client.connect();
     console.log('Connected to the database');
-    return client.db('test');
+    return client.db('exclusive_db');
   } catch (error) {
     console.error('Error connecting to the database:', error);
     throw error;
