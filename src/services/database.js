@@ -1,9 +1,8 @@
 const { MongoClient } = require('mongodb');
 
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
 
-const uri = 'mongodb+srv://dev:cmRtRArf5Ip6MsuG@cluster0.e5hbong.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-const client = new MongoClient(uri);
+const uri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.e5hbong.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`; const client = new MongoClient(uri);
 
 async function connectToDatabase() {
   try {
