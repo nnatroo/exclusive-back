@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   async function run() {
     try {
       const database = await connectToDatabase();
-      const movies = database.collection('carousel-images');
+      const movies = database.collection('swiper-images');
       const cursor = movies.find({});
 
       await cursor.forEach((doc) => {
