@@ -5,7 +5,6 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   const arr = [];
-
   async function run() {
     try {
       const database = await connectToDatabase();
