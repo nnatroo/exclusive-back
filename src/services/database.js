@@ -1,10 +1,7 @@
+require('dotenv').config(); 
 const { MongoClient } = require('mongodb');
-process.env.MONGODB_USERNAME = 'LukaKharkhelauri';
-process.env.MONGODB_PASSWORD = 'FN8lkGUG3Ivh7p0j';
-const username = encodeURIComponent(process.env.MONGODB_USERNAME);
-const password = encodeURIComponent(process.env.MONGODB_PASSWORD);
-const uri = `mongodb+srv://${username}:${password}@cluster0.e5hbong.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
+const uri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.e5hbong.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 const client = new MongoClient(uri);
 
 async function connectToDatabase() {
@@ -19,3 +16,4 @@ async function connectToDatabase() {
 }
 
 module.exports = { connectToDatabase, client };
+
