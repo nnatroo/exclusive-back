@@ -3,7 +3,7 @@ const express = require('express');
 const emojis = require('./emojis');
 const products = require('./products');
 const menus = require('./menus');
-const categories= require('./categories');
+const categories = require('./categories');
 const swiper = require('./swiper');
 
 const router = express.Router();
