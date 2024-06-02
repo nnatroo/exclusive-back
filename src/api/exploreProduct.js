@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   async function run() {
     try {
       const database = await connectToDatabase();
-      const products = database.collection('products');
+      const products = database.collection('explore-products');
       const cursor = products.find({});
 
       await cursor.forEach((doc) => {
