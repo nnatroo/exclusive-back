@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.use('/emojis', emojis);
 router.use('/products', products);
-router.use('/exploreProduct', exploreProduct);
 router.use('/menus', menus);
+router.use('/exploreProduct', exploreProduct);
 
 module.exports = router;
