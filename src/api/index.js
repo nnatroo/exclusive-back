@@ -13,12 +13,12 @@ router.get('/', (req, res) => {
   });
 });
 
-router.use('/bestSellingProducts', bestSellingProducts);
-
 router.use('/emojis', emojis);
 
 router.use('/products', products);
 
 router.use('/menus', menus);
+
+router.use('/bestSellingProducts', bestSellingProducts);
 
 module.exports = router;
