@@ -3,8 +3,8 @@ const express = require('express');
 const emojis = require('./emojis');
 const products = require('./products');
 const menus = require('./menus');
-const categories = require('./categories');
-const swiper = require('./swiper');
+const heroCategories = require('./heroCategories');
+const heroCategoriesSwiper = require('./heroCategoriesSwiper');
 
 const router = express.Router();
 
@@ -20,8 +20,8 @@ router.use('/products', products);
 
 router.use('/menus', menus);
 
-router.use('/categories', categories);
+router.use('/heroCategories', heroCategories);
 
-router.use('/swiper', swiper);
+router.use('/heroCategoriesSwiper', heroCategoriesSwiper);
 
 module.exports = router;
