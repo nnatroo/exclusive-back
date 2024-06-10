@@ -18,7 +18,6 @@ router.use('/emojis', emojis);
 router.use('/products', products);
 
 router.use('/menus', menus);
-
 router.use('/exploreProduct', exploreproduct);
 
 module.exports = router;
