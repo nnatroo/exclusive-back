@@ -4,7 +4,7 @@ const emojis = require('./emojis');
 const products = require('./products');
 const menus = require('./menus');
 const heroCategories = require('./heroCategories');
-const heroCategoriesSwiper = require('./heroCategoriesSwiper');
+const heroSwiper = require('./heroSwiper');
 
 const router = express.Router();
 
@@ -22,6 +22,6 @@ router.use('/menus', menus);
 
 router.use('/heroCategories', heroCategories);
 
-router.use('/heroCategoriesSwiper', heroCategoriesSwiper);
+router.use('/heroSwiper', heroSwiper);
 
 module.exports = router;
