@@ -20,7 +20,8 @@ app.use(express.json());
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 
 app.use(express.static('public'));
-app.use('/images', express.static('./images'));
+app.use('/images', express.static('../images'));
+app.use('/images', express.static('../images/heroImages'));
 
 app.get('/', (req, res) => {
   res.json({

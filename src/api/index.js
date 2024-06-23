@@ -3,6 +3,8 @@ const express = require('express');
 const emojis = require('./emojis');
 const products = require('./products');
 const menus = require('./menus');
+const heroCategories = require('./heroCategories');
+const heroSwiper = require('./heroSwiper');
 const bestSellingProducts = require('./bestSellingProducts');
 
 const router = express.Router();
@@ -20,5 +22,9 @@ router.use('/products', products);
 router.use('/menus', menus);
 
 router.use('/bestSellingProducts', bestSellingProducts);
+
+router.use('/heroCategories', heroCategories);
+
+router.use('/heroSwiper', heroSwiper);
 
 module.exports = router;
